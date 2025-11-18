@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Don Pollo Grill | Reviews</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+  <img src="img/logo-donpollo.png" alt="Don Pollo Grill logo">
+  <span>Don<span>Pollo</span> Grill</span>
+</a>
+
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a class="active" href="reviews.html">Reviews</a></li>
+      <li><a href="about.html">About & Skills</a></li>
+      <li><a href="contact.html">Contact & T&Cs</a></li>
+      <li><a href="showcase.html">Business Showcase</a></li>
+
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1 class="page-title">Customer Reviews</h1>
+  <p class="page-subtitle">
+    A review wall showing how Don Pollo Grill could build trust and reputation
+    through real customer feedback.
+  </p>
+
+  <!-- Hero image + intro -->
+  <div class="card reviews-hero">
+    <img 
+  src="img/reviews-hero.jpg" 
+  alt="Customer reviews hero banner" 
+  class="reviews-hero-img"
+/>
+    <p class="reviews-hero-text">
+      Word-of-mouth and honest reviews are key for a small family restaurant.
+      This section shows how feedback could be highlighted online to build
+      trust with new guests.
+    </p>
+  </div>
+
+  <!-- Existing reviews -->
+  <section class="review-grid" id="reviewGrid">
+    <article class="card">
+      <div class="review-name">Amina, Student</div>
+      <div class="review-rating">★★★★★ • Extra Hot Half Chicken</div>
+      <p>
+        “Best chicken spot near town. I like that I can see my total on the
+        website before I order – no surprises when I’m counting my student
+        budget.”
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="review-name">Jason, Office Worker</div>
+      <div class="review-rating">★★★★☆ • Lemon &amp; Herb Wrap</div>
+      <p>
+        “Quick service on lunch breaks and the wrap actually has flavour.
+        Ordering tool makes it easy to decide while I’m walking over.”
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="review-name">Maya &amp; Friends</div>
+      <div class="review-rating">★★★★★ • Whole Chicken &amp; Sides</div>
+      <p>
+        “We come here before nights out. The menu is simple but the playlist,
+        staff and food make it feel like home.”
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="review-name">Local Blogger</div>
+      <div class="review-rating">★★★★☆ • Garlic Herb Cubes</div>
+      <p>
+        “Love the focus on potatoes and chicken only – niche but it works.
+        Would love to see more veggie options in future.”
+      </p>
+    </article>
+  </section>
+
+  <!-- Leave a review form -->
+  <section class="card leave-review">
+    <h2>Leave a Review</h2>
+    <p style="font-size:0.9rem; color:#4b5563; margin-bottom:0.6rem;">
+      Share your experience and give Don Pollo Grill a rating out of 5. This form
+      adds your review to the page (for demo purposes only – no data is stored).
+    </p>
+
+    <form id="reviewForm">
+      <label for="reviewName">Name*</label>
+      <input type="text" id="reviewName" required />
+
+      <label for="reviewItem">What did you order?*</label>
+      <input type="text" id="reviewItem" placeholder="e.g. Extra Hot Half Chicken" required />
+
+      <label for="reviewText">Your review*</label>
+      <textarea id="reviewText" rows="4" required></textarea>
+
+      <label>Your rating*</label>
+      <div class="rating-stars">
+        <button type="button" class="rating-star" data-value="1">★</button>
+        <button type="button" class="rating-star" data-value="2">★</button>
+        <button type="button" class="rating-star" data-value="3">★</button>
+        <button type="button" class="rating-star" data-value="4">★</button>
+        <button type="button" class="rating-star" data-value="5">★</button>
+      </div>
+      <input type="hidden" id="reviewRating" />
+
+      <button type="submit" class="btn-primary" style="margin-top:0.4rem;">
+        Submit Review
+      </button>
+      <p id="reviewFeedback" class="form-feedback"></p>
+    </form>
+  </section>
+</main>
+
+
+<footer>
+  <p>&copy; 2025 Don Pollo Grill. Reviews shown here.</p>
+</footer>
+</body>
+</html>

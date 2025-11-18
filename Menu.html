@@ -1,0 +1,213 @@
+<!DOCTYPE html><link rel="stylesheet" href="css/styles.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Don Pollo Grill | Menu</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+  <img src="img/logo-donpollo.png" alt="Don Pollo Grill logo">
+  <span>Don<span>Pollo</span> Grill</span>
+</a>
+
+
+    <ul class="nav-links">
+     <li><a href="index.html">Home</a></li>
+<li><a class="active" href="menu.html">Menu</a></li>
+<li><a href="reviews.html">Reviews</a></li>
+<li><a href="about.html">About & Skills</a></li>
+<li><a href="contact.html">Contact & T&Cs</a></li>
+<li><a href="showcase.html">Business Showcase</a></li>
+
+
+    </ul>
+  </nav>
+</header>
+
+<section class="card" style="margin-top: 1.5rem;">
+  <h2 class="menu-section-title">Design Choices &amp; Use of AI Tools</h2>
+  <p class="menu-section-text">
+    This page is a prototype Problem-Solving Page for the restaurant case study. As the
+    fictional CTO of Don Pollo Grill, my goal was to show how an online menu and order
+    estimator could reduce confusion about prices and make visits faster and clearer for
+    customers and staff.
+  </p>
+  <p class="menu-section-text">
+    The layout is organised into sections (Mains, Sides, Drinks) with images, prices and
+    quantity inputs. Customers can explore food options visually and calculate an estimated
+    total before they arrive. In a real implementation this could connect to an online
+    ordering or click &amp; collect system.
+  </p>
+  <p class="menu-section-text">
+    I used generative AI tools (such as ChatGPT) to support my work by helping me refine
+    page structure, CSS styling and JavaScript logic. I did not copy complete pages directly:
+    instead, I adapted suggestions, combined them with my own ideas, and rewrote sections so
+    that the final code reflects my understanding. All images and text are used as part of a
+    student prototype, not a live commercial website.
+  </p>
+</section>
+
+<section class="card" style="margin-top: 1.5rem;">
+  <h2>How This Page Solves the Restaurant Scenario</h2>
+  <p>
+    This page is based on the restaurant problem-solving case study from the module. The brief
+    was to design a simple online journey that lets customers explore the menu, choose items and
+    see a clear estimated total before ordering.
+  </p>
+  <ul>
+    <li>
+      <strong>Customer transparency:</strong> the prices are visible for every item and the
+      estimated total updates based on the quantities entered.
+    </li>
+    <li>
+      <strong>Reducing queue time:</strong> customers could decide what they want and roughly
+      how much it will cost before they reach the till.
+    </li>
+    <li>
+      <strong>Upselling and sides:</strong> the layout encourages customers to add sides and
+      drinks, similar to real fast-casual restaurant menus.
+    </li>
+    <li>
+      <strong>Future data use:</strong> in a real system, the choices and totals could be stored
+      and analysed to see which products are most popular, and when demand is highest.
+    </li>
+  </ul>
+  <p>
+    This demonstrates how a basic web app can support a small restaurant with clearer information,
+    better customer experience and the foundation for data-driven decisions.
+  </p>
+</section>
+
+<main>
+  <h1 class="page-title">Menu &amp; Order Estimator</h1>
+  <p class="page-subtitle">
+    Build a sample order from Don Pollo Grill and see your estimated total instantly.
+    This is a demo menu inspired by real restaurants – prices and items are examples only.
+  </p>
+
+  <!-- Category tabs like Nando's -->
+  <nav class="menu-tabs">
+    <button class="menu-tab active" data-target="#mains">Mains</button>
+    <button class="menu-tab" data-target="#sides">Sides</button>
+    <button class="menu-tab" data-target="#drinks">Drinks</button>
+  </nav>
+
+
+
+  <!-- MAINS -->
+  <section id="mains" class="card menu-section">
+    <h2 class="menu-section-title">Mains – Flame-Grilled Chicken</h2>
+    <p class="menu-section-text">
+      All our chicken is marinated, then flame-grilled to order. Choose your spice level:
+      Lemon &amp; Herb, Medium, Hot or Extra Hot.
+    </p>
+
+    <div class="menu-grid">
+      <div class="menu-item card">
+        <img src="img/menu-quarter.jpg" alt="Quarter chicken meal" class="menu-img">
+        <h3>Quarter Chicken</h3>
+        <p>Lemon &amp; Herb / Medium / Hot / Extra Hot.</p>
+        <p class="menu-price">£5.50</p>
+        <label>Qty:
+          <input class="menu-qty" type="number" min="0" value="0" data-price="5.5">
+        </label>
+      </div>
+
+      <div class="menu-item card">
+        <img src="img/menu-half.jpg" alt="Half chicken meal" class="menu-img">
+        <h3>Half Chicken</h3>
+        <p>Perfect with one side.</p>
+        <p class="menu-price">£9.50</p>
+        <label>Qty:
+          <input class="menu-qty" type="number" min="0" value="0" data-price="9.5">
+        </label>
+      </div>
+
+      <div class="menu-item card">
+        <img src="img/menu-whole.jpg" alt="Whole chicken platter" class="menu-img">
+        <h3>Whole Chicken</h3>
+        <p>Platter for sharing around the table.</p>
+        <p class="menu-price">£16.00</p>
+        <label>Qty:
+          <input class="menu-qty" type="number" min="0" value="0" data-price="16">
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIDES -->
+  <section id="sides" class="card menu-section">
+    <h2 class="menu-section-title">Sides</h2>
+    <p class="menu-section-text">
+      Match your chicken with crispy potatoes, all cooked with Don Pollo’s house flavours.
+    </p>
+
+    <div class="menu-grid">
+      <div class="menu-item card">
+        <img src="img/menu-fries.jpg" alt="Peri-salted fries" class="menu-img">
+        <h3>Peri-Salted Fries</h3>
+        <p>Crispy potatoes with house peri seasoning.</p>
+        <p class="menu-price">£3.20</p>
+        <label>Qty:
+          <input class="menu-qty" type="number" min="0" value="0" data-price="3.2">
+        </label>
+      </div>
+
+      <div class="menu-item card">
+        <img src="img/menu-cubes.jpg" alt="Garlic herb potato cubes" class="menu-img">
+        <h3>Garlic Herb Cubes</h3>
+        <p>Roasted potato cubes with garlic &amp; herbs.</p>
+        <p class="menu-price">£3.80</p>
+        <label>Qty:
+          <input class="menu-qty" type="number" min="0" value="0" data-price="3.8">
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- DRINKS -->
+  <section id="drinks" class="card menu-section">
+  <h2 class="menu-section-title">Drinks</h2>
+  <p class="menu-section-text">
+    Stay refreshed – bottomless refills are great for long catch-ups and family meals.
+  </p>
+
+  <div class="menu-grid">
+    <div class="menu-item card">
+      <img src="img/menu-drink.jpg" alt="Bottomless soft drink" class="menu-img">
+      <h3>Bottomless Soft Drink</h3>
+      <p>Cola / Lemon / Orange.</p>
+      <p class="menu-price">£2.50</p>
+      <label>Qty:
+        <input class="menu-qty" type="number" min="0" value="0" data-price="2.5">
+      </label>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- ORDER SUMMARY -->
+  <section class="card" style="margin-top:1.5rem;">
+    <h2 class="menu-section-title">Order Summary</h2>
+    <p class="menu-section-text">
+      Use this calculator to estimate your bill before you order. In a live system this
+      would link to a real online ordering or click &amp; collect journey.
+    </p>
+
+    <button id="calcTotal" class="btn-primary" style="margin-top:0.8rem;">Calculate Total</button>
+    <p id="totalDisplay" class="order-summary">Estimated total: £0.00</p>
+  </section>
+</main>
+
+
+<footer>
+  <p>&copy; 2025 Don Pollo Grill (Fictional). Built by Enoch for Web App Development.</p>
+</footer>
+</body>
+</html>
